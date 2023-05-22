@@ -18,7 +18,7 @@ class BreakingNewsResponse extends Equatable {
     return BreakingNewsResponse(
       status: map['status'] as String,
       totalResults: map['totalResults'] as int,
-      articles: List<Article>.from((map['articles'] as List<int>).map<Article>((x) => Article.fromMap(x as Map<String,dynamic>),),),
+      articles: List<Article>.from(map['articles'].map<Article>((x) => Article.fromMap(x as Map<String,dynamic>),),),
     );
   }
 
